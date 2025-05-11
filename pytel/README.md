@@ -1,0 +1,1 @@
+A FastAPI starter project with OpenTelemetry
