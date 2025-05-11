@@ -1,2 +1,2 @@
 # kube
-Applications and templates for homelab
+A gallery of applications, templates, dockerfiles, etc.
