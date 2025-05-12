@@ -10,19 +10,13 @@ from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 
-pyroscope.configure(
-  application_name = "pytel", # replace this with some name for your application
-  server_address   = "http://pyroscope:4040", # replace this with the address of your Pyroscope server
-)
+# pyroscope.configure(
+#   application_name = "pytel", # replace this with some name for your application
+#   server_address   = "http://pyroscope:4040", # replace this with the address of your Pyroscope server
+# )
 
 app = FastAPI()
-
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
+app.include_router(users)
 
 resource = Resource(attributes={
     "service.name": "fastapi-service"

@@ -1,2 +1,2 @@
 # kube
-A collection of examples, templates, dockerfiles, etc.
+A collection of examples, tutorials, dockerfiles, etc.
