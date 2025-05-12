@@ -2,6 +2,6 @@ services:
   fastapi:
     build: .
     environment:
-      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4318
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4318
     ports:
       - "8000:8000"
